@@ -31,4 +31,4 @@ spec:
     name: ${REPO}
   selector:
     app: ${REPO}
-  type: ${REPO}
+  type: LoadBalancer

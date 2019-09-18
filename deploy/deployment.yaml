@@ -2,6 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: ${REPO}
+  namespace: default
 spec:
   replicas: 2
   selector:
@@ -12,6 +13,7 @@ spec:
       labels:
         app: ${REPO}
     spec:
+      restartPolicy: Always
       containers:
       - name: ${REPO}
         image: ${ORIGIN_REPO}/${REPO}:${IMAGE_TAG}
@@ -31,4 +33,3 @@ spec:
     name: ${REPO}
   selector:
     app: ${REPO}
-  type: LoadBalancer

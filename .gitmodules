@@ -1,0 +1,6 @@
+[submodule "ddd"]
+	path = ddd
+	url = https://github.com/fadexiii/jenkins-config.git
+[submodule "vender"]
+	path = vender
+	url = https://github.com/fadexiii/jenkins-config.git

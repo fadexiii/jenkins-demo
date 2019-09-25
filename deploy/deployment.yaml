@@ -20,7 +20,22 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
-
+        resources:
+          requests:
+            cpu: "0.2"
+            memory: "256Mi"
+          limits:
+            cpu: "1"
+            memory: "1Gi"
+        env:
+        - name: aliyun_logs_${REPO}
+          value: /usr/local/${REPO}/logs/*.log
+        volumeMounts:
+        - name: ${REPO}-log
+          mountPath: /usr/local/${REPO}/logs
+    volumes:
+    - name: ${REPO}
+      emptyDir: {}
 ---
 apiVersion: v1
 kind: Service

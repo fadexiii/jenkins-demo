@@ -1,2 +1,4 @@
 <?php
-echo 123;
+$myfile = fopen("/usr/local/php-demo/logs/a.log", "w+");
+$txt = time();
+fwrite($myfile, $txt);

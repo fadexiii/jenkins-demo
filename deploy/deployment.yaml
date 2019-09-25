@@ -34,7 +34,7 @@ spec:
         - name: ${REPO}-log
           mountPath: /usr/local/${REPO}/logs
       volumes:
-      - name: ${REPO}
+      - name: ${REPO}-log
         emptyDir: {}
 ---
 apiVersion: v1

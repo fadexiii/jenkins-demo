@@ -33,9 +33,9 @@ spec:
         volumeMounts:
         - name: ${REPO}-log
           mountPath: /usr/local/${REPO}/logs
-    volumes:
-    - name: ${REPO}
-      emptyDir: {}
+      volumes:
+      - name: ${REPO}
+        emptyDir: {}
 ---
 apiVersion: v1
 kind: Service

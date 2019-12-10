@@ -29,10 +29,10 @@ spec:
             memory: "1Gi"
         env:
         - name: aliyun_logs_${REPO}
-          value: /usr/local/${REPO}/logs/*.log
+          value: /home/work/www/logs/app.log
         volumeMounts:
         - name: ${REPO}-log
-          mountPath: /usr/local/${REPO}/logs
+          mountPath: /home/work/www/logs
       volumes:
       - name: ${REPO}-log
         emptyDir: {}

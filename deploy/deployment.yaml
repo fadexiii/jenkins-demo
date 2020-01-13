@@ -27,15 +27,6 @@ spec:
           limits:
             cpu: "1"
             memory: "1Gi"
-        env:
-        - name: aliyun_logs_${REPO}
-          value: /home/work/www/logs/app.log
-        volumeMounts:
-        - name: ${REPO}-log
-          mountPath: /home/work/www/logs
-      volumes:
-      - name: ${REPO}-log
-        emptyDir: {}
 ---
 apiVersion: v1
 kind: Service

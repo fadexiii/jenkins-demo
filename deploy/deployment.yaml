@@ -13,6 +13,9 @@ spec:
       labels:
         app: ${REPO}
     spec:
+      imagePullSecrets:
+      - name: qcloudregistrykey
+      - name: tencenthubkey
       restartPolicy: Always
       containers:
       - name: ${REPO}
